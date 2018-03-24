@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+\usepackage[bmargin=3cm, tmargin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage[latin1]{inputenc}
+\usepackage[pdftex]{hyperref}
+
+\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\setlength\parindent{0pt}
+
+\pagenumbering{gobble}
+
+%%%% Defines for form filling
+\newcommand{\signature}{%
+    Signature:\\
+    \vspace{1cm}\\
+    \rule{7cm}{1pt}\\
+    Date: \vbox{\hbox{\TextField[width=6cm]{\null}}\kern2pt\hrule}
+}
+
+\begin{document}
+
+\newcommand{\compyear}{2018\xspace}
+\newcommand{\competition}{SourceBots \compyear}
+
+\begin{minipage}[c]{0.30\textwidth}
+\includegraphics[height=2cm]{fig-SourceBots}
+\end{minipage}
+\hspace{0.03\textwidth}
+\begin{minipage}[c]{0.67\textwidth}
+\begin{center}
+{\large \textbf{\competition Media Consent Release Form} \par}
+\end{center}
+\end{minipage}
+\vspace{1cm}
+
+\textbf{This is not a ticket.} This is a required form to let you into the \competition competition.\\
+\vspace{0.3cm}
+
+\textbf{\large Media Consent}\\
+
+By signing this release form, you (the individual mentioned below) consent to your image, voice, biographical material, or other information being recorded by:
+\begin{itemize}
+    \item The University of Southampton
+    \item SourceBots
+    \item Current or future sponsors of SourceBots
+\end{itemize}
+Your recordings may be used in publications (including but not limited to; press releases, websites, blog posts, livestreams, videos, brochures, and posters) for the purpose of publicising/promoting the event and future events held by the above parties.
+
+\vspace{0.5cm}
+\textbf{\large Privacy Policy}\\
+
+Once signed, this form will be stored securely and encrypted at the University of Southampton for the entire time any recordings made at \competition is used. All recordings will be openly available to the internet. You have the right to request for the deletion of any personal data (including images) as per the EU General Data Protection Regulation (GDPR).
+
+\vspace{0.5cm}
+
+Individual for media consent to be granted:\\
+\begin{Form}
+Full Name: \vbox{\hbox{\TextField[width=12.7cm]{\null}}\kern2pt\hrule}\\
+Address: \hspace{0.21cm} \vbox{\hbox{\TextField[width=12.7cm]{\null}}\kern2pt\hrule}\\
+\vbox{\hbox{\TextField[width=0.983\textwidth]{\null}}\kern2pt\hrule}\\
+\vbox{\hbox{\TextField[width=0.983\textwidth]{\null}}\kern2pt\hrule}\\
+\vbox{\hbox{\TextField[width=0.983\textwidth]{\null}}\kern2pt\hrule}\\
+\vbox{\hbox{\TextField[width=0.983\textwidth]{\null}}\kern2pt\hrule}\\
+\begin{center}Please sign ONE of the two sections below:\end{center}
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{For those aged 12 or older:}
+
+By signing below, I, the above-named person of age 12 or older, have read and understood the terms above, and grant my consent.\\
+
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{For those aged under 12:}
+
+By signing below, I, the individual responsible for the above-named person, have read and understood the terms above, and grant my consent.\\
+Full Name: \vbox{\hbox{\TextField[width=5cm]{\null}}\kern2pt\hrule}\\
+\end{minipage}
+
+\begin{minipage}[t]{0.48\textwidth}
+\signature
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+\signature
+\end{minipage}
+\end{Form}
+\end{document}
