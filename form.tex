@@ -5,11 +5,11 @@
 \usepackage{xspace}
 \usepackage[latin1]{inputenc}
 \usepackage[pdftex]{hyperref}
-
-\usepackage[sfdefault]{roboto}  %% Option 'sfdefault' only if the base font of the document is to be sans serif
-\usepackage[T1]{fontenc}
-
 \setlength\parindent{0pt}
+
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
 
 \pagenumbering{gobble}
 
@@ -37,7 +37,7 @@
 \end{minipage}
 \vspace{1cm}
 
-\textbf{This is not a ticket.} This is a required form to let you into the \competition competition.\\
+\textbf{This is not a ticket.}\\\\ However, this form is required for entry into the \competition competition.\\
 \vspace{0.3cm}
 
 \textbf{\large Media Consent}\\
