@@ -27,7 +27,7 @@ watch:
 	while true; do \
 		inotifywait --event CLOSE_WRITE -q -r *.tex; \
 			make; \
-	make servercount; \
+		make; \
 	done
 
 
