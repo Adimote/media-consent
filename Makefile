@@ -1,4 +1,5 @@
-COMPILESVG=svg2pdf
+HAS_INKSCAPE := $(shell inkscape --version 2>/dev/null)
+HAS_SVG2PDF := $(shell svg2pdf --version 2>/dev/null)
 
 PDFLATEXFLAGS=-halt-on-error -interaction nonstopmode
 
@@ -12,13 +13,13 @@ form.pdf: form.tex fig-SourceBots.pdf
 	pdflatex $(PDFLATEXFLAGS) $<
 
 fig-%.pdf: fig-%.svg
-ifeq ($(COMPILESVG),inkscape)
+ifdef HAS_INKSCAPE
 	inkscape -A `pwd`/$@ `pwd`/$<
 else
-ifeq ($(COMPILESVG),svg2pdf)
+ifdef HAS_SVG2PDF
 	svg2pdf $< $@
 else
-	echo "Unknown COMPILESVG."; false
+	echo "No supported SVG build tools available"; false
 endif
 endif
 
