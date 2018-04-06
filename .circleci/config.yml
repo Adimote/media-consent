@@ -6,7 +6,7 @@ jobs:
         working_directory: ~/media-consent
         steps:
             - checkout
-            - run: "make"
+            - run: make COMPILESVG=svg2pdf
             - store_artifacts:
                 path: form.pdf
                 destination: form.pdf
