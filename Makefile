@@ -1,4 +1,4 @@
-COMPILESVG=inkscape
+COMPILESVG=svg2pdf
 
 PDFLATEXFLAGS=-halt-on-error -interaction nonstopmode
 
