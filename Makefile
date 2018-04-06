@@ -1,3 +1,5 @@
+COMPILESVG=svg2pdf
+
 PDFLATEXFLAGS=-halt-on-error -interaction nonstopmode
 
 all: form.pdf
@@ -10,7 +12,15 @@ form.pdf: form.tex fig-SourceBots.pdf
 	pdflatex $(PDFLATEXFLAGS) $<
 
 fig-%.pdf: fig-%.svg
+ifeq ($(COMPILESVG),inkscape)
+	inkscape -A `pwd`/$@ `pwd`/$<
+else
+ifeq ($(COMPILESVG),svg2pdf)
 	svg2pdf $< $@
+else
+	echo "Unknown COMPILESVG."; false
+endif
+endif
 
 watch:
 	make
