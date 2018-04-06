@@ -1,5 +1,7 @@
 # Media Consent Form
 
+[![CircleCI](https://circleci.com/gh/sourcebots/media-consent.svg?style=svg)](https://circleci.com/gh/sourcebots/media-consent)
+
 This is the form for students to grant media consent for our events, so we can take pictures and record video at will.
 
 
